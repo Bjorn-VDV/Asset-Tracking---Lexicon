@@ -212,21 +212,19 @@ namespace Asset_Tracking
                 }
 
                 // Printing based on office for "current" prices
+                Console.Write(obj.listLayer());
                 if (obj.Office == "Spain")
                 {
-                    Console.Write(obj.listLayer());
                     localPrice = obj.PriceinUK / 0.84f;
                     Console.WriteLine(String.Format("{0}{1,15}", "     EUR".PadRight(15), localPrice.ToString("C2", CultureInfo.CreateSpecificCulture("es-ES"))));
                 }
                 else if (obj.Office == "UK")
                 {
-                    Console.Write(obj.listLayer());
                     localPrice = obj.PriceinUK;
                     Console.WriteLine(String.Format("{0}{1,15}", "     GBP".PadRight(15), localPrice.ToString("C2", CultureInfo.CreateSpecificCulture("en-GB"))));
                 }
                 else if (obj.Office == "Sweden")
                 {
-                    Console.Write(obj.listLayer());
                     localPrice = obj.PriceinUK / 0.082f;
                     Console.WriteLine(String.Format("{0}{1,15}", "     SEK".PadRight(15), localPrice.ToString("C2", CultureInfo.CreateSpecificCulture("se-SE"))));
                 }
